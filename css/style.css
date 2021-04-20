@@ -1,0 +1,519 @@
+:root {
+  --navbar-bg: tomato;
+  --sticky-bg: rgb(52, 43, 112);
+  --about-bg-left: rgb(52, 43, 112);
+  --about-bg-right: rgb(255, 99, 71, 1);
+  --services-color: black;
+  --services-bg: rgb(52, 43, 112);
+  --services-card-bg: tomato;
+  --skills-left-bg: rgb(255, 99, 71, 1);
+  --skills-right-bg: rgb(52, 43, 112);
+  --contact-head: rgb(52, 43, 112);
+  --menu-at-media-bg: rgb(52, 43, 112);
+  --footer-bg: rgb(52, 43, 112);
+  --footer-color: tomato;
+}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,700;1,300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.max-width {
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+.navbar {
+  position: fixed;
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  padding: 15px 0;
+  background: var(--navbar-bg);
+  z-index: 1;
+}
+.navbar.sticky {
+  padding: 15px 0;
+  background: var(--sticky-bg);
+  border: tomato solid 3px; /*added april 10 */
+}
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo a {
+  font-size: 35px;
+  font-weight: 600;
+}
+#logo-letter-i,
+.logo-letter-i {
+  color: rgb(52, 43, 112);
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+#logo-letter-a,
+.logo-letter-a {
+  color: rgb(214, 55, 55);
+}
+#logo-letter-w,
+.logo-letter-w {
+  color: orange;
+}
+#logo-letter-d,
+.logo-letter-d {
+  color: green;
+}
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+.navbar .menu li a {
+  display: block;
+  color: rgb(214, 55, 55);
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 30px;
+  transition: all 0.3s ease;
+}
+.navbar .menu li a:hover {
+  color: white;
+}
+.menu-btn {
+  cursor: pointer;
+}
+.home {
+  display: flex;
+  background: url("..//images/city at night.jpg") no-repeat center;
+  height: 100vh;
+  color: tomato;
+  min-height: 500px;
+  max-height: 900px;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Montserrat", sans-serif;
+  align-items: center;
+  justify-content: center;
+}
+.home .max-width {
+  margin: auto 0 auto 30px;
+}
+.home .home-content .text-1 .text-3 {
+  font-size: 25px;
+}
+.home .home-content .text-2 {
+  font-size: 50px;
+  font-weight: 700;
+  color: tomato;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+.home-content a {
+  display: inline-block;
+  background: tomato;
+  color: white;
+  border: 2px solid white;
+  font-size: 20;
+  padding: 12px 36px;
+  margin-top: 30px;
+  border-radius: 20px;
+  transition: all 0.3s linear;
+}
+.home-content a:hover {
+  background-color: white;
+  color: tomato;
+}
+.about {
+  display: flex;
+  background-image: linear-gradient(
+    to right,
+    rgb(54, 45, 110),
+    tomato
+  ); /*april 16 not working*/
+  background-attachment: scroll;
+  font-family: "Montserrat", sans-serif;
+}
+.title {
+  font-size: 30px;
+  text-align: center;
+  padding: 30px 0 30px 0;
+}
+.about .about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.about .about-content .left {
+  width: 55%;
+}
+.about .about-content .left img {
+  background-image: url("images/team-1.jpg");
+  border-radius: 18px;
+}
+.about .about-content .right {
+  width: 45%;
+}
+.about .about-content .right .text {
+  margin-bottom: 20px;
+}
+.about .about-content .right p {
+  font-size: 20px;
+  text-align: justify;
+}
+.about .about-content .logo-letter-i,
+.about .about-content .logo-letter-a,
+.about .about-content .logo-letter-w,
+.about .about-content .logo-letter-d {
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+/* Style for Services Section */
+.services {
+  color: var(--services-color);
+  background: var(--services-bg);
+}
+.services .title {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+.services .services-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.services .services-content .card {
+  width: calc(33% - 20px);
+  background: var(--services-card-bg);
+  text-align: center;
+  border-radius: 6px;
+  padding: 20px 25px;
+  margin-bottom: 10px;
+}
+.services .services-content .card:hover {
+  background: aqua;
+}
+.services .services-content .card img {
+  height: 60px;
+  width: 60px;
+  background-color: white;
+}
+.services .services-content .card .box {
+  transition: all 0.3s ease;
+}
+.services .services-content .card .box:hover {
+  transform: scale(1.05);
+}
+.services .services-content .text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+.services .services-content p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}
+section.skills {
+  background-image: linear-gradient(
+    to right,
+    var(--skills-left-bg),
+    var(--skills-right-bg)
+  );
+}
+section.skills {
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}
+.skills .skills-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.skills .skills-content .column {
+  width: calc(50% - 10px);
+}
+.skills .skills-content .left .text {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.skills .skills-content .left p {
+  text-align: justify;
+  font-size: 18px;
+}
+.skills-content .left a {
+  display: inline-block;
+  background: tomato;
+  color: white;
+  border: 2px solid white;
+  font-size: 20;
+  padding: 12px 36px;
+  margin-top: 30px;
+  border-radius: 20px;
+}
+.skills .skills-content .left a:hover {
+  background-color: white;
+  color: tomato;
+}
+.skills .skills-content .right .bar {
+  margin-bottom: 15px;
+}
+.skills h3 {
+  color: rgb(52, 43, 112);
+}
+.skills .skills-content .right .info {
+  display: flex;
+  margin-bottom: 5px;
+  align-items: center;
+  justify-content: space-between;
+}
+.skills .skills-content .right .info:hover {
+  color: tomato;
+}
+.skills .skills-content .right .info span {
+  font-weight: 600;
+  font-size: 18px;
+  padding: 5px;
+}
+.skills .skills-content .right .line {
+  height: 10px;
+  width: 100%;
+  background: lightgray;
+  position: relative;
+}
+.skills .skills-content .right .line::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: 0;
+  right: 0;
+  background: tomato;
+}
+.skills-content .right .html::before {
+  width: 95%;
+}
+.skills-content .right .css::before {
+  width: 85%;
+}
+.skills-content .right .js::before {
+  width: 90%;
+}
+.skills-content .right .php::before {
+  width: 80%;
+}
+.skills-content .right .mysql::before {
+  width: 80%;
+}
+.contact {
+  display: flex;
+  background-color: tomato;
+  font-family: "Montseratt", sans-serif;
+  padding-bottom: 30px;
+}
+.contact .contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.contact .contact-content .column {
+  width: calc(50% - 30px);
+}
+.contact .contact-content .column .text {
+  color: black;
+  font-size: 25px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+.contact .contact-content .left p {
+  font-size: 18px;
+  text-align: justify;
+}
+.contact .contact-content .row {
+  display: flex;
+  height: 65px;
+  align-items: center;
+}
+.contact .contact-content .row .info {
+  margin-left: 30px;
+}
+.contact .contact-content .left img {
+  height: 20px;
+  width: 20px;
+}
+.contact .contact-content .info .head {
+  color: var(--contact-head);
+  font-weight: 600;
+  padding: 5px 0;
+}
+.contact .contact-content .info .head .sub-title {
+  font-weight: 600;
+}
+.contact .right form .fields {
+  display: flex;
+}
+.contact .right form .field,
+.contact .right form .fields .field {
+  height: 45px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.contact .right form .textarea {
+  height: 80;
+  width: 100%;
+}
+.contact .right form .name {
+  margin-right: 10px;
+}
+.contact .right form .email {
+  margin-right: 10px;
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea {
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+.contact .right form .field input:focus,
+.contact .right form .textarea textarea:focus {
+  border: red;
+}
+.contact .right form .textarea textarea {
+  padding-top: 10px;
+  resize: none;
+}
+.contact .right form .button {
+  height: 50px;
+  width: 180px;
+}
+.contact .right form .button button {
+  border: 2px solid white;
+  display: inline-block;
+  background: tomato;
+  color: white;
+  font-size: 18px;
+  padding: 10px 15px;
+  margin: 20px 0 20px 0;
+  border-radius: 20px;
+}
+.contact .right form .button button:hover {
+  color: tomato;
+  background: white;
+}
+
+footer {
+  font-family: "Montseratt", serif;
+  font-size: 18px;
+  text-align: center;
+  background: var(--footer-bg);
+  color: var(--footer-color);
+  padding: 50px 25px;
+}
+footer span a {
+  color: white;
+}
+footer span a:hover {
+  color: yellow;
+}
+@media (max-width: 1920px) {
+  .home .max-width {
+    margin-left: 0px;
+  }
+  .menu-btn {
+    display: none;
+    z-index: 999;
+  }
+}
+@media (max-width: 1104px) {
+  .about .about-content .left img {
+    height: 350px;
+    width: 350px;
+  }
+}
+@media (max-width: 991px) {
+  .max-width {
+    padding: 0 50px;
+  }
+}
+/* cellphone */
+@media (max-width: 947px) {
+  .menu-btn {
+    display: block;
+    z-index: 999;
+  }
+  .navbar .menu {
+    position: fixed;
+    height: 40vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    background: var(--menu-at-media-bg);
+    opacity: 90%;
+    text-align: center;
+    padding-top: 20px;
+    transition: all 0.5s ease;
+  }
+  .navbar .menu li {
+    display: block;
+  }
+  .navbar .menu.active {
+    left: 0;
+    height: 40vh;
+  }
+  .navbar .menu li a {
+    display: inline-block;
+    margin: 20px;
+    font-size: 35px;
+  }
+  .home .home-content .text-2 {
+    font-size: 35px;
+  }
+  .home .home-content a {
+    font-size: 18px;
+    padding: 10px 30px;
+  }
+  .max-width {
+    max-width: 930px;
+  }
+  .about .about-content .column {
+    width: 100%;
+  }
+  .about .about-content .left {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 60px;
+  }
+  .about .about-content .right {
+    flex: 100%;
+  }
+  .services .services-content .card {
+    width: calc(50% - 10px);
+    margin-bottom: 35px;
+  }
+  .skills .skills-content .column,
+  .contact .contact-content .column {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+}
+@media (max-width: 690px) {
+  .max-width {
+    padding: 0 23px;
+  }
+  .services .services-content .card {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .contact .right form .fields {
+    flex-direction: column;
+  }
+  .contact .right form .name,
+  .contact .right form .email {
+    margin: 0;
+  }
+}
